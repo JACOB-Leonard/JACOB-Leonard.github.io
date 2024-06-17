@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "cv.dtd">
+<cv>
+    <personalInformation>
+        <titre>ITエンジニア見習い</titre>
+        <name>
+            Léonard JACOB
+        </name>
+        <address>
+            イル・ド・フランス        
+        </address>
+        <email>leonard.jacob@hotmail.com</email>
+    </personalInformation>
+    <experience>
+        <job>
+            <title>
+                フルスタックデベロッパー            </title>
+            <company>
+                Infotel Conseil
+            </company>
+            <year>2023</year>
+            <description>
+                AngularウェブサイトとSpring Bootアプリケーションの開発。            
+            </description>
+        </job>
+        <job>
+            <title>
+                ウェブデベロッパー            
+            </title>
+            <company>
+                IPSL
+            </company>
+            <year>2022</year>
+            <description>
+                ウェブサイトやウェブアプリケーションの開発            
+            </description>
+        </job>
+    </experience>
+    <formation>
+        <education>
+            <degree>
+                ITエンジニア            
+            </degree>
+            <institution>
+                Sup Galilée
+            </institution>
+            <year>2025</year>
+            <projets>
+                <projet>Javaプロジェクト</projet>
+                <projet>セマンティック・ウェブ・プロジェクト</projet>
+            </projets>
+        </education>
+        <education>
+            <degree>
+                DUT Informatique
+            </degree>
+            <institution>
+                IUT de Villetaneuse
+            </institution>
+            <year>2022</year>
+        </education>
+        <education>
+            <degree>
+                Baccalaureat Filière Scientifique
+            </degree>
+            <institution>
+                Lycée Eugène Ionesco
+            </institution>
+            <year>2020</year>
+        </education>
+    </formation>
+    <skills>
+        <skill>
+            <name>
+                プログラミング言語            
+            </name>
+            <details>
+                JavaScript, Python, Java
+            </details>
+        </skill>
+        <skill>
+            <name>
+                フレームワーク
+            </name>
+            <details>
+                React, Angular, Spring
+            </details>
+        </skill>
+    </skills>
+    <languages>
+        <language>
+            <name>
+                フランス語
+            </name>
+            <level>
+                母国語            
+            </level>
+        </language>
+        <language>
+            <name>
+                英語
+            </name>
+            <level>
+                流暢
+            </level>
+        </language>
+    </languages>
+</cv>

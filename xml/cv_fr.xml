@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "cv.dtd">
+<cv>
+    <personalInformation>
+        <titre>Apprenti ingenieur informatique</titre>
+        <name>
+            Léonard JACOB
+        </name>
+        <address>
+            Ile de france
+        </address>
+        <email>leonard.jacob@hotmail.com</email>
+    </personalInformation>
+    <experience>
+        <job>
+            <title>
+                Développeur Full Stack
+            </title>
+            <company>
+                Infotel Conseil
+            </company>
+            <year>2023</year>
+            <description>
+                Développement de sites web en Angular et d'applications Spring Boot.
+            </description>
+        </job>
+        <job>
+            <title>
+                Développeur Web
+            </title>
+            <company>
+                IPSL
+            </company>
+            <year>2022</year>
+            <description>
+                Développement de sites web et d'applications web.
+            </description>
+        </job>
+    </experience>
+    <formation>
+        <education>
+            <degree>
+                Ingenieur Informatique
+            </degree>
+            <institution>
+                Sup Galilée
+            </institution>
+            <year>2025</year>
+            <projets>
+                <projet>Projet Java</projet>
+                <projet>Projet web semantique</projet>
+                <projet>Projet OLOC</projet>
+            </projets>
+        </education>
+        <education>
+            <degree>
+                DUT Informatique
+            </degree>
+            <institution>
+                IUT de
+            </institution>
+            <year>2022</year>
+        </education>
+        <education>
+            <degree>
+                Baccalaureat Filière Scientifique
+            </degree>
+            <institution>
+                Lycée
+            </institution>
+            <year>2020</year>
+        </education>
+    </formation>
+    <skills>
+        <skill>
+            <name>
+                Langages de programmation
+            </name>
+            <details>
+                JavaScript, Python, Java
+            </details>
+        </skill>
+        <skill>
+            <name>
+                frameworks
+            </name>
+            <details>
+                React, Angular, Spring
+            </details>
+        </skill>
+    </skills>
+    <languages>
+        <language>
+            <name>
+                français
+            </name>
+            <level>
+                Langue maternelle
+            </level>
+        </language>
+        <language>
+            <name>
+                Anglais
+            </name>
+            <level>
+                Courant
+            </level>
+        </language>
+    </languages>
+</cv>

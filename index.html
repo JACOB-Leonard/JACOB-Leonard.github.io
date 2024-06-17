@@ -1,7 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://schema.org/WebPage">
+<head>
+    <meta charset="UTF-8" />
+    <title>Portfolio Multilingue</title>
+    <link rel="alternate" hreflang="en" href="index.html?lang=en" />
+    <link rel="alternate" hreflang="fr" href="index.html?lang=fr" />
+    <link rel="alternate" hreflang="jp" href="index.html?lang=jp" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="Multilingual portfolio website" />
+    <meta name="author" content="Léonard JACOB" />
+    <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="Léonard JACOB" />
+        <meta itemprop="email" content="leonard.jacob@hotmail.com" />
+        <meta itemprop="sameAs" content="https://fr.linkedin.com/in/l%C3%A9onard-jacob-257a62228" />
+    </div>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <h1 id="title"></h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" id="home-link">Accueil</a></li>
+            <li><a href="cv.html" id="cv-link">Consulter le CV</a></li>
+            <li id="lang-switcher">
+                <img src="flags/fr.svg" alt="Français" class="flag" data-lang="fr">
+                <img src="flags/en.svg" alt="English" class="flag" data-lang="en">
+                <img src="flags/jp.svg" alt="日本語" class="flag" data-lang="jp">
+            </li>
+        </ul>
+    </nav>
+
+    
+    <main>
+        <section id="welcome">Bienvenue sur mon portfolio multilingue.</section>
+        <section id="projects">Mes projets.</section>
+        <section id="contact">Contactez-moi.</section>
+        <br><br><br><br><br>
+
+
+
+        <section id="about">Ci dessous, une video temporaire au sous titre adapté à la langue du site</section>
+        <div id="video">
+            <iframe id="youtube-iframe" width="800" height="600"
+                src="https://www.youtube.com/embed/F5tSoaJ93ac?cc_lang_pref=jp&cc_load_policy=1" title="Imagine Dragons &amp; JID - Ennemi (de la série Arcane League of Legends) | Clip officiel"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Votre Nom. Tous droits réservés.</p>
+    </footer>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+
+            function getQueryParam(param) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param);
+            }
+
+            function getLanguage() {
+                let lang = getQueryParam('lang');
+                if (lang) return lang;
+
+                lang = sessionStorage.getItem('lang');
+                if (lang) return lang;
+
+                lang = navigator.language.split('-')[0];
+                if (['en', 'fr', 'jp'].includes(lang)) return lang;
+
+                return 'en';
+            }
+
+            function fetchContent(lang) {
+                fetch(`./${lang}/content.json`)
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('title').textContent = data.title;
+                        document.getElementById('welcome').textContent = data.welcome;
+                        document.getElementById('about').textContent = data.about;
+                        document.getElementById('projects').textContent = data.projects;
+                        document.getElementById('contact').textContent = data.contact;
+                        document.getElementById('home-link').textContent = data.home;
+                        document.getElementById('cv-link').textContent = data.cv;
+                        document.querySelector('footer p').textContent = data.footer;
+                    })
+                    .catch(error => console.error('Error loading content:', error));
+            }
+
+            function changeVideoSubtitlesLanguage(langCode) {
+                const langMapping = {
+                    'en': 'en',
+                    'fr': 'fr-FR',
+                    'jp': 'ja'
+                };
+
+                var iframe = document.getElementById('youtube-iframe');
+                var src = iframe.src;
+
+                var youtubeLangCode = langMapping[langCode] || 'en';
+                src = src.replace(/cc_lang_pref=[a-zA-Z-]{2,5}/, 'cc_lang_pref=' + youtubeLangCode);
+                iframe.src = src;
+            }
+
+
+            const lang = getLanguage();
+            sessionStorage.setItem('lang', lang);
+            fetchContent(lang);
+            changeVideoSubtitlesLanguage(lang);
+
+            document.getElementById('lang-switcher').addEventListener('click', function(event) {
+                if (event.target.classList.contains('flag')) {
+                    const selectedLang = event.target.dataset.lang;
+                    fetchContent(selectedLang);
+                    changeVideoSubtitlesLanguage(selectedLang);
+                    window.history.pushState({}, '', `?lang=${selectedLang}`);
+                    sessionStorage.setItem('lang', selectedLang);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
