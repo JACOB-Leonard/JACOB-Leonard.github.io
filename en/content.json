@@ -1,10 +1,30 @@
 {
-    "title": "Multilingual Portfolio",
-    "welcome": "Welcome to my multilingual portfolio.",
-    "about": "Below, a temporary video with a subtitle adapted to the language of the site",
-    "projects": "My Projects",
-    "contact": "Contact Me",
+    "title": "Portfolio of Léonard JACOB",
+    "welcome": "Welcome to my portfolio",
     "home": "Home",
     "cv": "View CV",
-    "footer": "© 2024 Léonard JACOB All rights reserved."
+    "footer": "© 2024 Léonard JACOB. All rights reserved.",
+    
+    "name": "My name is Léonard JACOB",
+    "role": "I'm currently an apprentice Full Stack Developer at Infotel.",
+    "mission": "My mission is to develop the front-end, back-end, and Continuous Deployment of an internal CRM solution for the company's salespeople.",
+    "projectSteps": [
+        "Back-end development - Adding new services to the project's APIs",
+        "Front-end development - Adding new features to the application related to the Microsoft suite (Ms Graph)",
+        "DevOps - Setting up a staging and development environment"
+    ],
+    "education": "I am currently in my second year of computer engineering apprenticeship at the Sup Galilée engineering school of Paris 13 University.",
+    "educationSubtitle": "During my training, I worked on various projects, including:",
+    "projects": [
+        {
+            "type": "Linear and Combinatorial Optimization Project",
+            "details": [
+                "Analysis of an antenna coverage problem",
+                "Evaluation of different heuristic, metaheuristic solutions..."
+            ]
+        },
+        {"type": "Semantic Web Project - Portfolio"}
+    ],
+    "news": "News",
+    "videoAbout": "Waiting for Arcane Season 2:"
 }

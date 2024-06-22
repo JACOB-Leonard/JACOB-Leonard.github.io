@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <!-- Rule for the entire document -->
     <xsl:template match="/">
         <html>
             <head>
@@ -16,13 +15,12 @@
             </head>
             <body>
                 <header>
-                    <h1 id="title"></h1>
+                    <h1 id="title">My Portfolio</h1>
                 </header>
-
                 <nav>
                     <ul>
-                        <li><a href="index.html" id="home-link">Accueil</a></li>
-                        <li><a href="cv.html" id="cv-link">Consulter le CV</a></li>
+                        <li><a href="index.html" id="home-link">Home</a></li>
+                        <li><a href="cv.html" id="cv-link">View CV</a></li>
                         <li id="lang-switcher">
                             <a href="?lang=fr"><img src="flags/fr.svg" alt="Français"/></a>
                             <a href="?lang=en"><img src="flags/en.svg" alt="English"/></a>
@@ -35,7 +33,6 @@
         </html>
     </xsl:template>
 
-    <!-- Match for personal information section -->
     <xsl:template match="personalInformation">
         <div id="personalInfo">
             <h2><xsl:value-of select="titre"/></h2>
@@ -45,7 +42,6 @@
         </div>
     </xsl:template>
 
-    <!-- Match for experience section -->
     <xsl:template match="experience">
         <div id="experience">
             <h2>Experience</h2>
@@ -53,7 +49,6 @@
         </div>
     </xsl:template>
 
-    <!-- Match for each job -->
     <xsl:template match="job">
         <div class="job">
             <h3><xsl:value-of select="title"/></h3>
@@ -63,7 +58,6 @@
         </div>
     </xsl:template>
 
-    <!-- Match for education section -->
     <xsl:template match="formation">
         <div id="education">
             <h2>Education</h2>
@@ -71,13 +65,11 @@
         </div>
     </xsl:template>
 
-    <!-- Match for each education -->
     <xsl:template match="education">
         <div class="education">
             <h3><xsl:value-of select="degree"/></h3>
             <p><strong>Institution:</strong> <xsl:value-of select="institution"/></p>
             <p><strong>Year:</strong> <xsl:value-of select="year"/></p>
-            <!-- If projects are present -->
             <xsl:if test="projects">
                 <h4>Projects</h4>
                 <ul>
@@ -87,12 +79,10 @@
         </div>
     </xsl:template>
 
-    <!-- Match for each project -->
     <xsl:template match="project">
         <li><xsl:value-of select="."/></li>
     </xsl:template>
 
-    <!-- Match for skills section -->
     <xsl:template match="skills">
         <div id="skills">
             <h2>Skills</h2>
@@ -100,7 +90,6 @@
         </div>
     </xsl:template>
 
-    <!-- Match for each skill -->
     <xsl:template match="skill">
         <div class="skill">
             <h3><xsl:value-of select="name"/></h3>
@@ -108,7 +97,6 @@
         </div>
     </xsl:template>
 
-    <!-- Match for languages section -->
     <xsl:template match="languages">
         <div id="languages">
             <h2>Languages</h2>
@@ -116,7 +104,6 @@
         </div>
     </xsl:template>
 
-    <!-- Match for each language -->
     <xsl:template match="language">
         <div class="language">
             <h3><xsl:value-of select="name"/></h3>

@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
-    <!-- Règle de correspondance pour le document entier -->
     <xsl:template match="/">
         <html>
             <head>
                 <meta charset="UTF-8"/>
                 <link rel="stylesheet" type="text/css" href="style.css"/>
                 <meta charset="UTF-8" />
-                <title>Portfolio Multilingue</title>
+                <title>Portfolio de Léonard JACOB</title>
 
                 <link rel="stylesheet" href="style.css" />
                 <meta name="description" content="Multilingual portfolio website" />
                 <meta name="author" content="Léonard JACOB" />
+            </head>
+            <body>
                 <div itemprop="author" itemtype="http://schema.org/Person">
                     <meta itemprop="name" content="Léonard JACOB" />
                     <meta itemprop="email" content="leonard.jacob@hotmail.com" />
                     <meta itemprop="sameAs" content="https://fr.linkedin.com/in/l%C3%A9onard-jacob-257a62228" />
                 </div>
-            </head>
-            <body>
                 <header>
-                    <h1 id="title"></h1>
+                    <h1 id="title">Mon Portfolio</h1>
                 </header>
             
                 <nav>

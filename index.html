@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://schema.org/WebPage">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://schema.org/WebPage" vocab="http://schema.org/">
 <head>
     <meta charset="UTF-8" />
-    <title>Portfolio Multilingue</title>
+    <title>Portfolio de Léonard JACOB</title>
     <link rel="alternate" hreflang="en" href="index.html?lang=en" />
     <link rel="alternate" hreflang="fr" href="index.html?lang=fr" />
-    <link rel="alternate" hreflang="jp" href="index.html?lang=jp" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="alternate" hreflang="ja" href="index.html?lang=jp" />
+    <link rel="stylesheet" href="home.css" />
     <meta name="description" content="Multilingual portfolio website" />
     <meta name="author" content="Léonard JACOB" />
-    <div itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Léonard JACOB" />
-        <meta itemprop="email" content="leonard.jacob@hotmail.com" />
-        <meta itemprop="sameAs" content="https://fr.linkedin.com/in/l%C3%A9onard-jacob-257a62228" />
-    </div>
 </head>
 <body>
+    <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="Léonard JACOB"/>
+        <meta itemprop="email" content="leonard.jacob@hotmail.com"/>
+        <meta itemprop="sameAs" content="https://fr.linkedin.com/in/l%C3%A9onard-jacob-257a62228"/>
+    </div>
     <header>
-        <h1 id="title"></h1>
+        <h1 id="title" property="dc:title">Mon Portfolio</h1>
     </header>
 
     <nav>
         <ul>
-            <li><a href="index.html" id="home-link">Accueil</a></li>
-            <li><a href="cv.html" id="cv-link">Consulter le CV</a></li>
+            <li><a href="index.html" id="home-link" property="dc:relation">Accueil</a></li>
+            <li><a href="cv.html" id="cv-link" property="dc:relation">Consulter le CV</a></li>
             <li id="lang-switcher">
                 <img src="flags/fr.svg" alt="Français" class="flag" data-lang="fr">
                 <img src="flags/en.svg" alt="English" class="flag" data-lang="en">
@@ -31,32 +31,55 @@
             </li>
         </ul>
     </nav>
-
     
     <main>
-        <section id="welcome">Bienvenue sur mon portfolio multilingue.</section>
-        <section id="projects">Mes projets.</section>
-        <section id="contact">Contactez-moi.</section>
-        <br><br><br><br><br>
+        <div>
+            <h1 property="dc:title" id="welcome">Bienvenue sur mon portfolio multilingue.</h1>
+            <p id="name">Je m'appelle Léonard JACOB.</p>
 
+            <div id="role-and-image">
+                <p id="role">J'occupe actuellement un poste de Développeur Full Stack au sein de l'entreprise Infotel.</p>
+                <div id="img_ent">
+                    <ul>
+                        <li><a href="http://www.infotel.com"><img src="https://infotel.com/wp-content/themes/infotel/proto/app/assets/media/images/logo-footer.png" alt="Infotel"></a></li>
+                    </ul>
+                </div>
+            </div>
 
+            <p id="mission">Ma mission consiste à Développer la partie front-end, back-end et Déploiement Continu d'une solution interne de CRM pour les commerciaux de l'entreprise.</p>
+            <div id="projectSteps"></div>
 
-        <section id="about">Ci dessous, une video temporaire au sous titre adapté à la langue du site</section>
-        <div id="video">
-            <iframe id="youtube-iframe" width="800" height="600"
-                src="https://www.youtube.com/embed/F5tSoaJ93ac?cc_lang_pref=jp&cc_load_policy=1" title="Imagine Dragons &amp; JID - Ennemi (de la série Arcane League of Legends) | Clip officiel"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-            </iframe>
+            <p id="education">Je suis actuellement en 2ème année d’ingénieur en informatique en apprentissage, à l'école d'ingénieur Sup Galilée de l'université Paris 13.</p>
+            <div id="img_ecole">
+                <ul>
+                    <li><a href="http://www.sup-galilee.univ-paris13.fr"><img height="30" src="https://www.sup-galilee.univ-paris13.fr/wp-content/uploads/2019/06/LOGO1.png" alt="sup galilee"></a></li>
+                    <li><a href="http://www.univ-paris13.fr"><img width="150" src="https://www.univ-spn.fr/wp-content/uploads/2023/02/logo-footer-e1675338062261.png" alt="paris13"></a></li>
+                </ul>
+            </div>
+            <p id="educationSubtitle">Voici quelques projets sur lesquels j'ai travaillé :</p>
+
+            <div id="projects"></div>
+        </div>
+
+        <div id="actu">
+            <h2 id="news">Actualité</h2>
+            <p id="video-about">En attandant la saison 2 d'Arcane:</p>
+            <div id="video">
+                <iframe id="youtube-iframe"
+                    src="https://www.youtube.com/embed/F5tSoaJ93ac?cc_lang_pref=jp&cc_load_policy=1" title="Imagine Dragons &amp; JID - Ennemi (de la série Arcane League of Legends) | Clip officiel"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Votre Nom. Tous droits réservés.</p>
+        <p id="footer">&copy; 2024 Léonard JACOB. Tous droits réservés.</p>
     </footer>
 
-    <script type="text/javascript">
+    <script>
         document.addEventListener("DOMContentLoaded", function() {
 
             function getQueryParam(param) {
@@ -83,12 +106,54 @@
                     .then(data => {
                         document.getElementById('title').textContent = data.title;
                         document.getElementById('welcome').textContent = data.welcome;
-                        document.getElementById('about').textContent = data.about;
-                        document.getElementById('projects').textContent = data.projects;
-                        document.getElementById('contact').textContent = data.contact;
                         document.getElementById('home-link').textContent = data.home;
                         document.getElementById('cv-link').textContent = data.cv;
                         document.querySelector('footer p').textContent = data.footer;
+                        document.getElementById('name').textContent = data.name;
+                        document.getElementById('role').textContent = data.role;
+                        document.getElementById('mission').textContent = data.mission;
+                        document.getElementById('education').textContent = data.education;
+                        document.getElementById('educationSubtitle').textContent = data.educationSubtitle;
+                        document.getElementById('news').textContent = data.news;
+                        document.getElementById('video-about').textContent = data.videoAbout;
+                    
+                        // Traitement de projectSteps
+                        const projectStepsElement = document.getElementById('projectSteps');
+                        projectStepsElement.innerHTML = '';
+                        for (const step of data.projectSteps) {
+                            const li = document.createElement('li');
+                            li.textContent = step;
+                            projectStepsElement.appendChild(li);
+                        }
+                    
+                        // Traitement de projects
+                        const projectsElement = document.getElementById('projects');
+                        projectsElement.innerHTML = '';
+                        for (const project of data.projects) {
+                            const projectElement = document.createElement('div');
+                            
+                            // Création d'une liste pour les types de projets
+                            const projectTypeList = document.createElement('ul');
+                            const projectTypeItem = document.createElement('li');
+                            projectTypeList.appendChild(projectTypeItem);
+                            
+                            const projectType = document.createElement('p');
+                            projectType.textContent = project.type;
+                            projectTypeItem.appendChild(projectType); // Ajout du type de projet comme élément de la liste
+                            
+                            projectElement.appendChild(projectTypeList);
+                            
+                            // Création d'une sous-liste pour les détails
+                            const detailsList = document.createElement('ul');
+                            for (const detail of project.details || []) { // Vérification si details existe pour éviter les erreurs
+                                const detailItem = document.createElement('li');
+                                detailItem.textContent = detail;
+                                detailsList.appendChild(detailItem);
+                            }
+                            projectTypeItem.appendChild(detailsList); // Ajout des détails comme sous-liste du type de projet
+                            
+                            projectsElement.appendChild(projectElement);
+                        }
                     })
                     .catch(error => console.error('Error loading content:', error));
             }

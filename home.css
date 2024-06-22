@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+select {
+    margin: 10px;
+    padding: 5px;
+}
+
+nav {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Afficher les éléments en ligne */
+    justify-content: space-around; /* Espacement égal entre les éléments */
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+#cv-link {
+    display: block;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#cv-link:hover {
+    background-color: #0056b3;
+}
+
+#lang-switcher {
+    display: flex;
+    align-items: center;
+}
+
+#lang-switcher img {
+    width: 30px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#language-selector {
+    display: flex;
+    align-items: center;
+}
+
+.flag {
+    width: 30px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#video {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+#video-container {
+    display: flex;
+    align-items: center;
+}
+
+#youtube-iframe {
+    width: 800px;
+    height: 600px;
+}
+
+#video-text {
+    margin-left: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr; /* Divise la page en 5 colonnes */
+}
+
+main > div:first-child {
+    grid-column: 2 / 3; /* Le premier div prend 2/5 de l'espace */
+}
+
+#actu {
+    grid-column: 4 / 5; /* La vidéo prend 1/5 de l'espace, située dans la 4ème colonne */
+}
+
+#video iframe {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: fit-content;
+}
+
+#role-and-image {
+    display: flex;
+    align-items: center; /* Centre les éléments verticalement */
+    justify-content: flex-start; /* Alignement horizontal au début */
+}
+
+#role-and-image #img_ent {
+    margin-left: 20px; /* Ajoute un peu d'espace entre le texte et l'image */
+}
+
+#projectSteps li {
+    margin-left: 20px; /* Ajustez selon le retrait désiré */
+}
+
+li:has(> a) {
+    list-style-type: none;
+}

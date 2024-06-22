@@ -1,10 +1,30 @@
 {
-    "title": "Mon Portfolio",
+    "title": "Portfolio de Léonard JACOB",
     "welcome": "Bienvenue sur mon portfolio",
-    "about": "Ci dessous, une video temporaire au sous titre adapté à la langue du site",
-    "projects": "Projets",
-    "contact": "Contactez-moi",
     "home": "Accueil",
     "cv":"Consulter le CV",
-    "footer": "© 2024 Léonard JACOB. Tous droits réservés."
+    "footer": "© 2024 Léonard JACOB. Tous droits réservés.",
+    
+    "name":"Je m'appelle Léonard JACOB",
+    "role": "J'occupe actuellement un poste d'apprenti Développeur Full Stack au sein de l'entreprise Infotel.",
+    "mission": "Ma mission consiste à Développer la partie front-end, back-end et Déploiement Continu d'une solution interne de CRM pour les commerciaux de l'entreprise",
+    "projectSteps": [
+        "Développement back-end - Ajout de nouveaux services dans les API du projet",
+        "Développement front-end - Ajout de nouvelles fonctionnalités dans l'application en lien avec la suite Microsoft (Ms Graph)",
+        "Dev Ops - Mise en place d'un environnement de recette et de developpement"
+    ],
+    "education": "Je suis actuellement en 2ème année d’ingénieur en informatique en apprentissage, à l'école d'ingénieur Sup Galilée de l'université Paris 13.",
+    "educationSubtitle": "Durant ma formation j'ai travaillé sur différents projets, parmis lesquels :",
+    "projects": [
+        {
+            "type": "Projet d'optimisation linéaire et combinatoire",
+            "details": [
+                "Analyse d'un problème de converture d'antenne",
+                "Evaluation de différente solution heuristique, methaheuristique..."
+            ]
+        },
+        {"type": "Projet Web Sémantique - Portfolio"}
+    ],
+    "news": "Actualités",
+    "videoAbout": "En attandant la saison 2 d'Arcane:"
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <!-- ドキュメント全体に対するルール -->
     <xsl:template match="/">
         <html>
             <head>
@@ -16,13 +15,13 @@
             </head>
             <body>
                 <header>
-                    <h1 id="title"></h1>
+                    <h1 id="title">マルチリンガルポートフォリオ</h1>
                 </header>
 
                 <nav>
                     <ul>
-                        <li><a href="index.html" id="home-link">Accueil</a></li>
-                        <li><a href="cv.html" id="cv-link">Consulter le CV</a></li>
+                        <li><a href="index.html" id="home-link">ホーム</a></li>
+                        <li><a href="cv.html" id="cv-link">履歴書を見る</a></li>
                         <li id="lang-switcher">
                             <a href="?lang=fr"><img src="flags/fr.svg" alt="Français"/></a>
                             <a href="?lang=en"><img src="flags/en.svg" alt="English"/></a>
@@ -35,7 +34,6 @@
         </html>
     </xsl:template>
 
-    <!-- 個人情報セクションに対するマッチング -->
     <xsl:template match="personalInformation">
         <div id="personalInfo">
             <h2><xsl:value-of select="titre"/></h2>
@@ -45,7 +43,6 @@
         </div>
     </xsl:template>
 
-    <!-- 経験セクションに対するマッチング -->
     <xsl:template match="experience">
         <div id="experience">
             <h2>経験</h2>
@@ -53,7 +50,6 @@
         </div>
     </xsl:template>
 
-    <!-- 各ジョブに対するマッチング -->
     <xsl:template match="job">
         <div class="job">
             <h3><xsl:value-of select="title"/></h3>
@@ -63,7 +59,6 @@
         </div>
     </xsl:template>
 
-    <!-- 教育セクションに対するマッチング -->
     <xsl:template match="formation">
         <div id="education">
             <h2>教育</h2>
@@ -71,13 +66,11 @@
         </div>
     </xsl:template>
 
-    <!-- 各教育に対するマッチング -->
     <xsl:template match="education">
         <div class="education">
             <h3><xsl:value-of select="degree"/></h3>
             <p><strong>機関:</strong> <xsl:value-of select="institution"/></p>
             <p><strong>年:</strong> <xsl:value-of select="year"/></p>
-            <!-- プロジェクトがある場合 -->
             <xsl:if test="projects">
                 <h4>プロジェクト</h4>
                 <ul>
@@ -87,12 +80,10 @@
         </div>
     </xsl:template>
 
-    <!-- 各プロジェクトに対するマッチング -->
     <xsl:template match="project">
         <li><xsl:value-of select="."/></li>
     </xsl:template>
 
-    <!-- スキルセクションに対するマッチング -->
     <xsl:template match="skills">
         <div id="skills">
             <h2>スキル</h2>
@@ -100,7 +91,6 @@
         </div>
     </xsl:template>
 
-    <!-- 各スキルに対するマッチング -->
     <xsl:template match="skill">
         <div class="skill">
             <h3><xsl:value-of select="name"/></h3>
@@ -108,7 +98,6 @@
         </div>
     </xsl:template>
 
-    <!-- 言語セクションに対するマッチング -->
     <xsl:template match="languages">
         <div id="languages">
             <h2>言語</h2>
@@ -116,7 +105,6 @@
         </div>
     </xsl:template>
 
-    <!-- 各言語に対するマッチング -->
     <xsl:template match="language">
         <div class="language">
             <h3><xsl:value-of select="name"/></h3>
