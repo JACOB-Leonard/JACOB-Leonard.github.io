@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:cv="http://rdfs.org/resume-rdf">
+
+    <rdf:Person>
+        <cv:titre>ITエンジニア見習い</cv:titre>
+        <cv:name>Léonard JACOB</cv:name>
+        <cv:address>イル・ド・フランス</cv:address>
+        <cv:email>leonard.jacob@hotmail.com</cv:email>
+    </rdf:Person>
+
+    <rdf:Job>
+        <cv:title>フルスタックデベロッパー</cv:title>
+        <cv:company>Infotel Conseil</cv:company>
+        <cv:year>2023</cv:year>
+        <cv:description>AngularウェブサイトとSpring Bootアプリケーションの開発。</cv:description>
+    </rdf:Job>
+
+    <rdf:PastJob>
+        <cv:title>ウェブデベロッパー</cv:title>
+        <cv:company>IPSL</cv:company>
+        <cv:year>2022</cv:year>
+        <cv:description>ウェブサイトやウェブアプリケーションの開発</cv:description>
+    </rdf:PastJob>
+
+    <rdf:Formation1>
+        <cv:degree>ITエンジニア</cv:degree>
+        <cv:institution>Sup Galilée</cv:institution>
+        <cv:year>2025</cv:year>
+        <cv:project>Javaプロジェクト</cv:project>
+        <cv:project>セマンティック・ウェブ・プロジェクト</cv:project>
+    </rdf:Formation1>
+
+    <rdf:Formation2>
+        <cv:degree>DUT Informatique</cv:degree>
+        <cv:institution>IUT de Villetaneuse</cv:institution>
+        <cv:year>2022</cv:year>
+    </rdf:Formation2>
+
+    <rdf:Formation3>
+        <cv:degree>Baccalaureat Filière Scientifique</cv:degree>
+        <cv:institution>Lycée Eugène Ionesco</cv:institution>
+        <cv:year>2020</cv:year>
+    </rdf:Formation3>
+
+    <rdf:Skill1>
+        <cv:name>プログラミング言語</cv:name>
+        <cv:details>JavaScript, Python, Java</cv:details>
+    </rdf:Skill1>
+
+    <rdf:Skill2>
+        <cv:name>フレームワーク</cv:name>
+        <cv:details>React, Angular, Spring</cv:details>
+    </rdf:Skill2>
+
+    <rdf:Lang1>
+        <cv:name>フランス語</cv:name>
+        <cv:level>母国語</cv:level>
+    </rdf:Lang1>
+
+    <rdf:Lang2>
+        <cv:name>英語</cv:name>
+        <cv:level>流暢</cv:level>
+    </rdf:Lang2>
+
+</rdf:RDF>

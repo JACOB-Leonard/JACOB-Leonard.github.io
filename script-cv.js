@@ -25,6 +25,11 @@
                         document.getElementById('title').textContent = data.title;
                         document.getElementById('home-link').textContent = data.home;
                         document.getElementById('cv-link').textContent = data.cv;
+
+                        var linkByTitle = document.querySelector('link[title="CV RDF"]');
+                        if (linkByTitle) {
+                            linkByTitle.setAttribute('href', `rdf/cv_${lang}.rdf`);
+                        }
                     })
                 .catch(error => console.error('Error loading content:', error));
             }           

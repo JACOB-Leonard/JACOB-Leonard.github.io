@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:cv="http://rdfs.org/resume-rdf">
+
+    <rdf:Person>
+        <cv:titre>Apprenti ingenieur informatique</cv:titre>
+        <cv:name>Léonard JACOB</cv:name>
+        <cv:address>Ile de france</cv:address>
+        <cv:email>leonard.jacob@hotmail.com</cv:email>
+    </rdf:Person>
+
+    <rdf:Job>
+        <cv:title>Développeur Full Stack</cv:title>
+        <cv:company>Infotel Conseil</cv:company>
+        <cv:year>2023</cv:year>
+        <cv:description>Développement de sites web en Angular et d'applications Spring Boot.</cv:description>
+    </rdf:Job>
+
+    <rdf:PastJob>
+        <cv:title>Développeur Web</cv:title>
+        <cv:company>IPSL</cv:company>
+        <cv:year>2022</cv:year>
+        <cv:description>Développement de sites web et d'applications web.</cv:description>
+    </rdf:PastJob>
+
+    <rdf:Formation1>
+        <cv:degree>Ingenieur Informatique</cv:degree>
+        <cv:institution>Sup Galilée</cv:institution>
+        <cv:year>2025</cv:year>
+        <cv:project>Projet Java</cv:project>
+        <cv:project>Projet web semantique</cv:project>
+        <cv:project>Projet OLOC</cv:project>
+    </rdf:Formation1>
+
+    <rdf:Formation2>
+        <cv:degree>DUT Informatique</cv:degree>
+        <cv:institution>IUT de</cv:institution>
+        <cv:year>2022</cv:year>
+    </rdf:Formation2>
+
+    <rdf:Formation3>
+        <cv:degree>Baccalaureat Filière Scientifique</cv:degree>
+        <cv:institution>Lycée</cv:institution>
+        <cv:year>2020</cv:year>
+    </rdf:Formation3>
+
+    <rdf:Skill1>
+        <cv:name>Langages de programmation</cv:name>
+        <cv:details>JavaScript, Python, Java</cv:details>
+    </rdf:Skill1>
+
+    <rdf:Skill2>
+        <cv:name>Frameworks</cv:name>
+        <cv:details>React, Angular, Spring</cv:details>
+    </rdf:Skill2>
+
+    <rdf:Lang1>
+        <cv:name>Français</cv:name>
+        <cv:level>Langue maternelle</cv:level>
+    </rdf:Lang1>
+
+    <rdf:Lang2>
+        <cv:name>Anglais</cv:name>
+        <cv:level>Courant</cv:level>
+    </rdf:Lang2>
+
+</rdf:RDF>
