@@ -1,4 +1,3 @@
-
         document.addEventListener("DOMContentLoaded", function() {
 
             function getQueryParam(param) {
@@ -105,6 +104,7 @@
             document.getElementById('lang-switcher').addEventListener('click', function(event) {
                 if (event.target.classList.contains('flag')) {
                     const selectedLang = event.target.getAttribute('about');
+                    console.log(selectedLang);
                     fetchContent(selectedLang);
                     changeVideoSubtitlesLanguage(selectedLang);
                     window.history.pushState({}, '', `?lang=${selectedLang}`);

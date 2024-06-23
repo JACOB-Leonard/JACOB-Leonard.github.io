@@ -1,92 +1,56 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://schema.org/WebPage">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" xmlns:vocab="http://schema.org/">
 <head>
-    <title>Portfolio Multilingue</title>
-    <link rel="alternate" hreflang="en" href="cv.html?lang=en" >
-    <link rel="alternate" hreflang="fr" href="cv.html?lang=fr" >
-    <link rel="alternate" hreflang="ja" href="cv.html?lang=jp" >
-    <link rel="stylesheet" href="cv.css" >
-    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Portfolio de Léonard JACOB</title>
+    <link rel="alternate" hreflang="en" href="index.html?lang=en" />
+    <link rel="alternate" hreflang="fr" href="index.html?lang=fr" />
+    <link rel="alternate" hreflang="ja" href="index.html?lang=jp" />
+    <link rel="stylesheet" href="cv.css" />
+    <meta name="description" content="Multilingual portfolio website" />
+    <meta name="author" content="Léonard JACOB" />
+    <meta property="schema:name" content="Léonard JACOB" />
+    <meta property="schema:email" content="leonard.jacob@hotmail.com" />
+    <meta property="schema:sameAs" content="https://fr.linkedin.com/in/l%C3%A9onard-jacob-257a62228" />
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html" id="home-link">Accueil</a></li>
-            <li><a href="cv.html" id="cv-link">Consulter le CV</a></li>
-            <li id="lang-switcher">
-                <img src="flags/fr.svg" alt="Français" class="flag" data-lang="fr">
-                <img src="flags/en.svg" alt="English" class="flag" data-lang="en">
-                <img src="flags/jp.svg" alt="日本語" class="flag" data-lang="jp">
-            </li>
-        </ul>
-    </nav>
+        <div property="header">
+            <h1 id="title" property="dc:title">Portfolio de Léonard JACOB</h1>
+            <div property="nav">
+                <ul>
+                    <li><a href="index.html" id="home-link" property="dc:relation">Accueil</a></li>
+                    <li><a href="cv.html" id="cv-link" property="dc:relation">Consulter le CV</a></li>
+                    <li id="lang-switcher">
+                        <img src="flags/fr.svg" alt="Français" class="flag" about="fr"/>
+                        <img src="flags/en.svg" alt="English" class="flag" about="en"/>
+                        <img src="flags/jp.svg" alt="日本語" class="flag" about="jp" />
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-    
-            function getQueryParam(param) {
-                const urlParams = new URLSearchParams(window.location.search);
-                return urlParams.get(param);
-            }
-    
-            function getLanguage() {
-                let lang = getQueryParam('lang');
-                if (lang) return lang;
-    
-                lang = sessionStorage.getItem('lang');
-                if (lang) return lang;
-    
-                lang = navigator.language.split('-')[0];
-                if (['en', 'fr', 'jp'].includes(lang)) return lang;
-    
-                return 'en';
-            }
-    
-            const lang = getLanguage();
-            console.log(lang);
-            sessionStorage.setItem('lang', lang);
-            // URL du fichier XML et XSL
-            const xmlFile = `xml/cv_${lang}.xml`;
-            const xslFile = `xsl/cv_${lang}.xsl`;
-    
-            function transformXMLtoHTML(xmlString, xslString) {
-                const parser = new DOMParser();
-                const xmlDoc = parser.parseFromString(xmlString, "text/xml");
-                const xslDoc = parser.parseFromString(xslString, "text/xml");
-    
-                const xsltProcessor = new XSLTProcessor();
-                xsltProcessor.importStylesheet(xslDoc);
-    
-                const resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
-    
-                const tempDiv = document.createElement('div');
-                tempDiv.appendChild(resultFragment);
-    
-                return tempDiv.innerHTML;
-            }
-    
-            // Charger le contenu des fichiers XML et XSL
-            fetch(xmlFile)
-                .then(response => response.text())
-                .then(xmlString => {
-                    fetch(xslFile)
-                        .then(response => response.text())
-                        .then(xslString => {
-                            const transformedHTML = transformXMLtoHTML(xmlString, xslString);
-                            document.body.innerHTML = transformedHTML;
-                        })
-                        .catch(error => console.error('Error loading XSL file:', error));
-                })
-                .catch(error => console.error('Error loading XML file:', error));
-        
-                document.getElementById('lang-switcher').addEventListener('click', function(event) {
-                if (event.target.classList.contains('flag')) {
-                    const selectedLang = event.target.dataset.lang;
-                    window.history.pushState({}, '', `?lang=${selectedLang}`);
-                    sessionStorage.setItem('lang', selectedLang);
-                }
-            });
-        });
-    </script>
+        <div property="main">
+
+            <div id="content"></div>
+        </div>
+
+    <div property="footer">
+        <p id="footer">&copy; 2024 Léonard JACOB. Tous droits réservés.</p>
+        <p about=""
+            resource="https://www.w3.org/TR/rdfa-syntax"
+            rel="dc:conformsTo" xmlns:dc="http://purl.org/dc/terms/">
+                <a href="https://validator.w3.org/markup/check?uri=referer"><img
+                src="https://www.w3.org/Icons/valid-xhtml-rdfa" alt="Valid XHTML + RDFa" height="31" width="88" /></a>
+        </p>
+        <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                    src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="CSS Valide !" />
+            </a>
+        </p>
+    </div>
+
+    <script type="text/javascript" src="script-cv.js"></script>
 </body>
 </html>

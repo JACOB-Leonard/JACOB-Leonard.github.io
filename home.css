@@ -151,16 +151,16 @@ div[property="main"]  > div:first-child {
 
 #role-and-image {
     display: flex;
-    align-items: center; /* Centre les éléments verticalement */
-    justify-content: flex-start; /* Alignement horizontal au début */
+    align-items: center;
+    justify-content: flex-start;
 }
 
 #role-and-image #img_ent {
-    margin-left: 20px; /* Ajoute un peu d'espace entre le texte et l'image */
+    margin-left: 20px;
 }
 
 #projectSteps li {
-    margin-left: 20px; /* Ajustez selon le retrait désiré */
+    margin-left: 20px;
 }
 
 li:has(> a) {
@@ -168,6 +168,6 @@ li:has(> a) {
 }
 
 div[property="footer"] p:not(:first-child) {
-    display: inline-block; /* Ou 'inline', selon la mise en page souhaitée */
-    margin-right: 10px; /* Ajoute un peu d'espace entre les éléments, ajustez selon les besoins */
+    display: inline-block; 
+    margin-right: 10px;
 }

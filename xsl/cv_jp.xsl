@@ -3,32 +3,7 @@
 
     <xsl:template match="/">
         <html>
-            <head>
-                <meta charset="UTF-8"/>
-                <link rel="stylesheet" type="text/css" href="style.css"/>
-                <meta charset="UTF-8" />
-                <title>マルチリンガルポートフォリオ</title>
-                <link rel="alternate" hreflang="en" href="index.html?lang=en" />
-                <link rel="alternate" hreflang="fr" href="index.html?lang=fr" />
-                <link rel="alternate" hreflang="jp" href="index.html?lang=jp" />
-                <link rel="stylesheet" href="style.css" />
-            </head>
             <body>
-                <header>
-                    <h1 id="title">マルチリンガルポートフォリオ</h1>
-                </header>
-
-                <nav>
-                    <ul>
-                        <li><a href="index.html" id="home-link">ホーム</a></li>
-                        <li><a href="cv.html" id="cv-link">履歴書を見る</a></li>
-                        <li id="lang-switcher">
-                            <a href="?lang=fr"><img src="flags/fr.svg" alt="Français"/></a>
-                            <a href="?lang=en"><img src="flags/en.svg" alt="English"/></a>
-                            <a href="?lang=jp"><img src="flags/jp.svg" alt="日本語"/></a>
-                        </li>
-                    </ul>
-                </nav>
                 <xsl:apply-templates select="cv"/>
             </body>
         </html>

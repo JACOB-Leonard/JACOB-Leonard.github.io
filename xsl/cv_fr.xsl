@@ -1,41 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:template match="/">
-        <html>
-            <head>
-                <meta charset="UTF-8"/>
-                <link rel="stylesheet" type="text/css" href="style.css"/>
-                <meta charset="UTF-8" />
-                <title>Portfolio de Léonard JACOB</title>
-
-                <link rel="stylesheet" href="style.css" />
-                <meta name="description" content="Multilingual portfolio website" />
-                <meta name="author" content="Léonard JACOB" />
-            </head>
             <body>
-                <div itemprop="author" itemtype="http://schema.org/Person">
-                    <meta itemprop="name" content="Léonard JACOB" />
-                    <meta itemprop="email" content="leonard.jacob@hotmail.com" />
-                    <meta itemprop="sameAs" content="https://fr.linkedin.com/in/l%C3%A9onard-jacob-257a62228" />
-                </div>
-                <header>
-                    <h1 id="title">Mon Portfolio</h1>
-                </header>
-            
-                <nav>
-                    <ul>
-                        <li><a href="index.html" id="home-link">Accueil</a></li>
-                        <li><a href="cv.html" id="cv-link">Consulter le CV</a></li>
-                        <li id="lang-switcher">
-                            <a href="?lang=fr"><img src="flags/fr.svg" alt="Français"/></a>
-                            <a href="?lang=en"><img src="flags/en.svg" alt="English"/></a>
-                            <a href="?lang=jp"><img src="flags/jp.svg" alt="日本語"/></a>
-                        </li>
-                    </ul>
-                </nav>
                 <xsl:apply-templates select="cv"/>
             </body>
-        </html>
     </xsl:template>
 
     <!-- Correspondance pour la section d'informations personnelles -->

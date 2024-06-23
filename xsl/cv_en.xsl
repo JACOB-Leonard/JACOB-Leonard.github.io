@@ -2,35 +2,9 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <xsl:template match="/">
-        <html>
-            <head>
-                <meta charset="UTF-8"/>
-                <link rel="stylesheet" type="text/css" href="style.css"/>
-                <meta charset="UTF-8" />
-                <title>Multilingual Portfolio</title>
-                <link rel="alternate" hreflang="en" href="index.html?lang=en" />
-                <link rel="alternate" hreflang="fr" href="index.html?lang=fr" />
-                <link rel="alternate" hreflang="jp" href="index.html?lang=jp" />
-                <link rel="stylesheet" href="style.css" />
-            </head>
             <body>
-                <header>
-                    <h1 id="title">My Portfolio</h1>
-                </header>
-                <nav>
-                    <ul>
-                        <li><a href="index.html" id="home-link">Home</a></li>
-                        <li><a href="cv.html" id="cv-link">View CV</a></li>
-                        <li id="lang-switcher">
-                            <a href="?lang=fr"><img src="flags/fr.svg" alt="Français"/></a>
-                            <a href="?lang=en"><img src="flags/en.svg" alt="English"/></a>
-                            <a href="?lang=jp"><img src="flags/jp.svg" alt="日本語"/></a>
-                        </li>
-                    </ul>
-                </nav>
                 <xsl:apply-templates select="cv"/>
             </body>
-        </html>
     </xsl:template>
 
     <xsl:template match="personalInformation">
