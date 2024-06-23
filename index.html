@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" xmlns:vocab="http://schema.org/">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" xmlns:vocab="http://schema.org/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Portfolio de Léonard JACOB</title>
+    <title property="dc:title">Portfolio de Léonard JACOB</title>
     <link rel="alternate" hreflang="en" href="index.html?lang=en" />
     <link rel="alternate" hreflang="fr" href="index.html?lang=fr" />
     <link rel="alternate" hreflang="ja" href="index.html?lang=jp" />
@@ -13,7 +13,7 @@
     <meta property="schema:email" content="leonard.jacob@hotmail.com" />
     <meta property="schema:sameAs" content="https://fr.linkedin.com/in/l%C3%A9onard-jacob-257a62228" />
 </head>
-<body>
+<body typeof="foaf:Document">
     <div property="header">
         <h1 id="title" property="dc:title">Portfolio de Léonard JACOB</h1>
         <div property="nav">
@@ -29,42 +29,42 @@
         </div>
     </div>
     
-    <div property="main">
-        <div>
+    <div property="main" typeof="schema:WebPage">
+        <div typeof="foaf:Person" about="#leonardJacob">
             <h1 property="dc:title" id="welcome">Bienvenue sur mon portfolio multilingue.</h1>
-            <p id="name">Je m'appelle Léonard JACOB.</p>
+            <p id="name" property="foaf:name">Je m'appelle Léonard JACOB.</p>
 
-            <div id="role-and-image">
-                <p id="role">J'occupe actuellement un poste de Développeur Full Stack au sein de l'entreprise Infotel.</p>
-                <div id="img_ent">
+            <div id="role-and-image" property="foaf:currentProject">
+                <p id="role" property="foaf:title">J'occupe actuellement un poste de Développeur Full Stack au sein de l'entreprise Infotel.</p>
+                <div id="img_ent" property="foaf:depiction">
                     <ul>
-                        <li><a href="http://www.infotel.com"><img src="https://infotel.com/wp-content/themes/infotel/proto/app/assets/media/images/logo-footer.png" alt="Infotel" /></a></li>
+                        <li><a href="http://www.infotel.com" property="dc:relation"><img src="https://infotel.com/wp-content/themes/infotel/proto/app/assets/media/images/logo-footer.png" alt="Infotel" property="contentUrl"/></a></li>
                     </ul>
                 </div>
             </div>
 
-            <p id="mission">Ma mission consiste à Développer la partie front-end, back-end et Déploiement Continu d'une solution interne de CRM pour les commerciaux de l'entreprise.</p>
+            <p id="mission" typeof="foaf:Project" property="foaf:name">Ma mission consiste à Développer la partie front-end, back-end et Déploiement Continu d'une solution interne de CRM pour les commerciaux de l'entreprise.</p>
             <div id="projectSteps"></div>
 
-            <p id="education">Je suis actuellement en 2ème année d’ingénieur en informatique en apprentissage, à l'école d'ingénieur Sup Galilée de l'université Paris 13.</p>
+            <p id="education" typeof="foaf:Education" property="dc:description">Je suis actuellement en 2ème année d’ingénieur en informatique en apprentissage, à l'école d'ingénieur Sup Galilée de l'université Paris 13.</p>
             <div id="img_ecole">
                 <ul>
-                    <li><a href="http://www.sup-galilee.univ-paris13.fr"><img height="30" src="https://www.sup-galilee.univ-paris13.fr/wp-content/uploads/2019/06/LOGO1.png" alt="sup galilee" /></a></li>
-                    <li><a href="http://www.univ-paris13.fr"><img width="150" src="https://www.univ-spn.fr/wp-content/uploads/2023/02/logo-footer-e1675338062261.png" alt="paris13" /></a></li>
+                    <li><a href="http://www.sup-galilee.univ-paris13.fr" property="foaf:homepage"><img height="30" src="https://www.sup-galilee.univ-paris13.fr/wp-content/uploads/2019/06/LOGO1.png" alt="sup galilee" property="foaf:depiction"/></a></li>
+                    <li><a href="http://www.univ-paris13.fr" property="foaf:homepage"><img width="150" src="https://www.univ-spn.fr/wp-content/uploads/2023/02/logo-footer-e1675338062261.png" alt="paris13" property="foaf:depiction"/></a></li>
                 </ul>
             </div>
-            <p id="educationSubtitle">Voici quelques projets sur lesquels j'ai travaillé :</p>
+            <p id="educationSubtitle" property="dc:title">Voici quelques projets sur lesquels j'ai travaillé :</p>
 
             <div id="projects"></div>
         </div>
 
-        <div id="actu">
-            <h2 id="news">Actualité</h2>
-            <p id="video-about">En attandant la saison 2 d'Arcane:</p>
+        <div id="actu" typeof="schema:BlogPosting">
+            <h2 id="news" property="dc:title">Actualité</h2>
+            <p id="video-about" property="dc:description">En attandant la saison 2 d'Arcane:</p>
             <div id="video">
                 <object type="text/html" id="video-youtube"
-                    data="https://www.youtube.com/embed/F5tSoaJ93ac?cc_lang_pref=jp&amp;cc_load_policy=1&amp;start=32">
-                    <a id="youtube" href="https://www.youtube.com/embed/F5tSoaJ93ac?cc_lang_pref=jp&amp;cc_load_policy=1&amp;start=32">Video</a>
+                    data="https://www.youtube.com/embed/F5tSoaJ93ac?cc_lang_pref=jp&amp;cc_load_policy=1&amp;start=32" property="foaf:Document">
+                    <a id="youtube" href="https://www.youtube.com/embed/F5tSoaJ93ac?cc_lang_pref=jp&amp;cc_load_policy=1&amp;start=32" property="contentUrl">Video</a>
                 </object>
             </div>
         </div>
