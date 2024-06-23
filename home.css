@@ -5,16 +5,17 @@ body {
     padding: 0;
 }
 
-header {
+div[property="header"]{
     background-color: #333;
     color: white;
-    padding: 10px 0;
     text-align: center;
 }
 
 h1 {
     margin: 0;
     font-size: 2em;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 select {
@@ -22,14 +23,14 @@ select {
     padding: 5px;
 }
 
-nav {
+div[property="nav"] {
     background-color: #007bff;
     color: white;
     padding: 10px 0;
     text-align: center;
 }
 
-nav ul {
+div[property="nav"] ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -37,22 +38,23 @@ nav ul {
     justify-content: space-around; /* Espacement égal entre les éléments */
 }
 
-nav li {
+div[property="nav"] li {
     display: inline;
     margin: 0 10px;
+    align-content: center;
 }
 
-nav a {
+div[property="nav"] a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav a:hover {
+div[property="nav"] a:hover {
     text-decoration: underline;
 }
 
-main {
+div[property="main"] {
     padding: 20px;
 }
 
@@ -118,7 +120,7 @@ section {
     margin-left: 20px;
 }
 
-footer {
+div[property="footer"] {
     background-color: #333;
     color: white;
     text-align: center;
@@ -128,12 +130,12 @@ footer {
     bottom: 0;
 }
 
-main {
+div[property="main"] {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 1fr 1fr; /* Divise la page en 5 colonnes */
 }
 
-main > div:first-child {
+div[property="main"]  > div:first-child {
     grid-column: 2 / 3; /* Le premier div prend 2/5 de l'espace */
 }
 
@@ -141,7 +143,7 @@ main > div:first-child {
     grid-column: 4 / 5; /* La vidéo prend 1/5 de l'espace, située dans la 4ème colonne */
 }
 
-#video iframe {
+#video object {
     aspect-ratio: 16 / 9;
     width: 100%;
     height: fit-content;
@@ -163,4 +165,9 @@ main > div:first-child {
 
 li:has(> a) {
     list-style-type: none;
+}
+
+div[property="footer"] p:not(:first-child) {
+    display: inline-block; /* Ou 'inline', selon la mise en page souhaitée */
+    margin-right: 10px; /* Ajoute un peu d'espace entre les éléments, ajustez selon les besoins */
 }
